@@ -1,7 +1,7 @@
 # FSAD-End-Sem-lab-exam
 
 1. Add Booking
-2. 1. Add Booking
+
 Method: POST
 
 Example URL:
