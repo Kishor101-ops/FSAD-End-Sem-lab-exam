@@ -1,0 +1,31 @@
+package com.klef.fsad.exam.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.klef.fsad.exam.model.Booking;
+import com.klef.fsad.exam.repository.BookingRepository;
+
+@Service
+public class BookingService {
+
+    @Autowired
+    private BookingRepository bookingRepository;
+
+    public String addBooking(Booking booking) {
+        if (booking.getBookingId() == null) {
+            return "Booking ID must be provided manually and cannot be null";
+        }
+
+        bookingRepository.save(booking);
+        return "Booking added successfully";
+    }
+
+    public String deleteBooking(Long bookingId) {
+        if (bookingRepository.existsById(bookingId)) {
+            bookingRepository.deleteById(bookingId);
+            return "Booking deleted successfully";
+        } else {
+            return "Booking not found";
+        }
+    }
+}
