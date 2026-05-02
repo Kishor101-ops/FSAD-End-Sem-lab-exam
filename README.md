@@ -3,7 +3,9 @@
 1. Add Booking
 2. 1. Add Booking
 Method: POST
-URL:
+
+Example URL:
+
 http://localhost:8080/booking/add
 
 {  
@@ -17,7 +19,9 @@ http://localhost:8080/booking/add
 
 2. Delete Booking
 Method: DELETE
-URL:
+
+Example URL:
+
 http://localhost:8080/booking/delete/101
 
 **Expected Output**:
